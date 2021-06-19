@@ -1,0 +1,25 @@
+<div class="grid wide">
+    <div class="row">
+
+        {{#each courses}}
+        <div class="col l-4 m-6 c-12">
+            <div class="card-course-item">                
+                <a href="/courses/{{this.slug}}">
+                    <div class="card-img" style="background-image: url({{this.image}})" alt="{{this.name}}"></div>
+                </a>
+                <div class="card-body">
+                    <a href="/courses/{{this.slug}}">
+                        <h1 class="card-title">{{this.name}}</h1>
+                    </a>
+                    <p class="card-text">{{this.description}}</p> 
+                    <div class="card-studentsCount">
+                        <i class="fas fa-users"></i>
+                        <span>100</span>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

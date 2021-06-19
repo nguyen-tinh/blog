@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <link rel="stylesheet" href="/assets/css/grid.css">
+        <link rel="stylesheet" href="/assets/css/responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="app">
+
+            {{> header}}
+            
+            <div class="container" style="background-color: #f5f5f5; padding-top: 48px;">
+                {{{body}}}
+            </div>
+
+            {{> footer}}
+
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-menu__overlay"></div>
+            <div class="navbar-menu__content">
+
+                <header>
+                <a href="/" class="navbar-menu__logo">
+                <div class="navbar-menu__logo-icon"></div>
+                </a>
+                <div class="navbar-menu-closed">
+                    <i class="fas fa-times"></i>
+                </div>
+                </header>
+
+                <ul class="navbar-menu__list">
+                <li class="navbar-menu__item">
+                    <a href="/login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Đăng nhập</span>
+                    </a>
+                </li>
+                <li class="navbar-menu__item">
+                    <a href="/signup">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Đăng ký</span>
+                    </a>
+                </li>
+                <li class="navbar-menu__item">
+                    <a href="/">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li class="navbar-menu__item">
+                    <a href="/courses">
+                    <i class="fas fa-book"></i>
+                    <span>Khóa học</span>
+                    </a>
+                </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </body>
+    
+    <script>
+        const menuBtn = document.querySelector('.navbar-menu-icon')
+        const navbarMenu = document.querySelector('.navbar-menu')
+        const menuClose = document.querySelector('.navbar-menu-closed')
+        const menuOverlay = document.querySelector('.navbar-menu__overlay')
+
+        menuBtn.onclick = function() {
+            navbarMenu.classList.toggle('show');
+        }
+
+        menuClose.onclick = function() {
+            navbarMenu.classList.toggle('show');
+        }
+
+        menuOverlay.onclick = function() {
+            navbarMenu.classList.toggle('show');
+        }
+
+    </script>
+</html>
